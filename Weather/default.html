@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>Weather</title>
+    <!-- WinJS 引用 -->
+    <link href="/WinJS/css/ui-dark.css" rel="stylesheet" />
+    <script src="/WinJS/js/base.js"></script>
+    <script src="/WinJS/js/ui.js"></script>
+    <!-- Weather 引用 -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-2.1.4.min.js"></script>
+    <script src="/js/navigator.js"></script>
+    <script src="/js/default.js"></script>
+</head>
+
+<body class="win-type-body" id="app">
+    <div class="splitView" data-win-control="WinJS.UI.SplitView">
+        <div>
+            <div class="header">
+                <button class="win-splitviewpanetoggle" data-win-control="WinJS.UI.SplitViewPaneToggle" data-win-options="{ splitView: select('.splitView') }"></button>
+                <div class="title">Conan Weather</div>
+            </div>
+            <div class="nav-commands">
+                <div data-win-control="WinJS.UI.SplitViewCommand" data-win-options="{
+                        label: '天气',
+                        icon: 'home',
+                        tooltip: '天气',
+                        location: '/pages/home/home.html',
+                        oninvoked: mySplitView.homeClicked
+                    }"></div>
+                <div data-win-control="WinJS.UI.SplitViewCommand" data-win-options="{
+                        label: '城市',
+                        icon: 'favorite',
+                        tooltip: '城市',
+                        placement: 'bottom',
+                        location: '/pages/page2/page2.html',
+                        oninvoked: mySplitView.cityClicked
+                    }"></div>
+            </div>
+            <div class="nav-commands commands-bottom">
+                <div data-win-control="WinJS.UI.SplitViewCommand" data-win-options="{ label: '设置', icon: 'settings'}"></div>
+            </div>
+        </div>
+        <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/home/home.html'}"></div>
+        <!-- <div class="contenttext">
+            <h2 class="win-h2">SplitView Content area</h2>
+            <input type="text" class="win-textbox">
+            <button class="win-button">weather</button>
+            <input type="checkbox">
+            <input type="radio">
+            <select name="" id="">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <input type="submit" value="submit">
+            <button class="win-button action" id="createImperative">Create DatePicker Imperative</button>
+            <br />
+            <br />
+            <button class="win-button action" id="createDeclarative">Create DatePicker Declarative</button>
+            <br /><br />
+            <div id="divControlCreation"></div>
+            <div id="wifiToggle" data-win-control="WinJS.UI.ToggleSwitch" data-win-options="{title: '通知', labelOn: '开', labelOff: '关', checked: true, onchange: toggleWifi}"></div>
+            <h1>1</h1>
+            <h1>2</h1>
+            <h1>3</h1>
+            <h1>4</h1>
+            <h1>5</h1>
+            <h1>6</h1>
+            <h1>7</h1>
+            <h1>8</h1>
+            <h1>9</h1>
+            <h1>10</h1>
+            <h1>11</h1>
+            <h1>12</h1>
+            <h1>13</h1>
+            <h1>14</h1>
+            <h1>15</h1>
+            <h1>16</h1>
+            <h1>17</h1>
+            <h1>18</h1>
+            <h1>19</h1>
+            <h1>20</h1>
+        </div> -->
+    </div>
+    <!-- <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/home/home.html'}"></div> -->
+</body>
+
+</html>

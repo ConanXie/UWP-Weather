@@ -1,0 +1,88 @@
+#app {
+    height: 100%;
+    // background: #fff;
+    .header {
+        white-space: nowrap;
+        .win-splitviewpanetoggle {
+            float: left;
+        }
+        .title {
+            font-size: 25px;
+            left: 50px;
+            line-height: 48px;
+            vertical-align: middle;
+            display: inline-block;
+        }
+    }
+    .nav-commands {
+        // margin-top: 20px;
+        /* .win-splitviewcommand-button {
+            background-color: transparent;
+        } */
+        .win-splitview-pane-closed .win-splitviewcommand-label {
+            visibility: hidden;
+        }
+    }
+    .win-splitview-pane {
+        position: relative;
+        .commands-bottom {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            border-top: 1px solid #5f5f5f;
+        }
+    }
+    .contenttext {
+        margin-left: 20px;
+        margin-top: 6px;
+        // color: #000;
+        .win-splitview-content {
+            // background-color: rgb(112,112,112);
+        }
+    }
+    .win-splitview-content {
+        overflow-y: scroll;
+    }
+}
+#contenthost {
+    height: 100%;
+    width: 100%;
+}
+
+.fragment {
+    /* Define a grid with rows for a banner and a body */
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 128px 1fr;
+    display: -ms-grid;
+    height: 100%;
+    width: 100%;
+}
+
+    .fragment header[role=banner] {
+        /* Define a grid with columns for the back button and page title. */
+        -ms-grid-columns: 37px 83px 1fr;
+        -ms-grid-rows: 1fr;
+        display: -ms-grid;
+    }
+
+        .fragment header[role=banner] .win-navigation-backbutton {
+            -ms-grid-column: 2;
+            margin-top: 57px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .fragment header[role=banner] .titlearea {
+            -ms-grid-column: 3;
+            margin-top: 37px;
+        }
+
+            .fragment header[role=banner] .titlearea .pagetitle {
+                width: calc(100% - 20px);
+            }
+
+    .fragment section[role=main] {
+        -ms-grid-row: 2;
+        height: 100%;
+        width: 100%;
+    }
