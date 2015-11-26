@@ -8,8 +8,7 @@
         ready: function (element, options) {
             // TODO: Initialize the page here.
 
-            WinJS.Utilities.query("a").listen("click",
-                this.linkClickEventHandler, false);
+            WinJS.Utilities.query("a").listen("click", this.linkClickEventHandler, false);
 
             // Retrieve the div that hosts the Rating control.
             var ratingControlDiv = document.getElementById("ratingControlDiv");
@@ -98,8 +97,6 @@
             var link = eventInfo.target;
             WinJS.Navigation.navigate(link.href);
         }
-
-
 
     });
 })();

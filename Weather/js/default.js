@@ -21,7 +21,7 @@
                     homeClicked: WinJS.UI.eventHandler(function (ev) {
                         //implementation here
                         // console.log(this.winControl.location);
-                        console.log(nav.location);
+                        // console.log(nav.location);
                         if (nav.location !== this.winControl.location) {
                             nav.navigate(this.winControl.location);
                         }
@@ -32,6 +32,19 @@
                         }
                     })
                 };
+
+                /*var messageDialog = new Windows.UI.Popups.MessageDialog('nav.state.name1');
+                console.log(messageDialog);
+                messageDialog.showAsync().done(function () {
+                    console.log('success');
+                    var popupMenu = new Windows.UI.Popups.PopupMenu();
+                    console.log(popupMenu.commands);
+                    popupMenu.showAsync({x: 100, y: 100}).done(function () {
+                        console.log('popupMenu');
+                    });
+                });*/
+                // Windows.Storage.ApplicationData.current.localSettings.values['data'] = '{"date": "1992-3-25", "value": 23}';
+                // console.log(Windows.Storage.ApplicationData.current.localSettings);
 
                 var xmlDocument = new Windows.Data.Xml.Dom.XmlDocument();
                 // console.log(xmlDocument);
