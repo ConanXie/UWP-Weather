@@ -1,0 +1,20 @@
+@content-pl: 20px;
+@toolbar-bg: #222;
+@icon-height: 48px;
+.setting {
+    & > div {
+        padding-left: @content-pl;
+    }
+    .toolbar {
+        background: @toolbar-bg;
+        h6 {
+            line-height: @icon-height;
+        }
+    }
+    .setting-box {
+        input,
+        label {
+            vertical-align: middle;
+        }
+    }
+}
