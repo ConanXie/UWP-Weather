@@ -36,12 +36,27 @@
             <!-- A hyperlink to page2.html. -->
             <p><a href="/pages/page2/page2.html">Go to page 2.</a></p>
             <button data-win-control="WinJS.UI.BackButton"></button>
-            <progress class="win-ring win-large" style=" width: 500px; height: 500px;"></progress>
+            <progress class="win-ring win-large" style=" width: 50px; height: 50px; color: #f00;"></progress>
             <button class="win-button">A button</button><input type="checkbox" class="win-checkbox" />
+            <input type="radio" class="win-radio">
+            <input type="file" class="win-button win-button-file">
+            <input type="range" class="win-slider">
+            <!-- <a href="http://www.baidu.com" class="win-link">百度</a> -->
+            <p class="win-code">
+                var a = 0;
+            </p>
             <div data-win-control="WinJS.UI.TimePicker"></div>
             <input type="email" class="win-textbox" />
             <!-- <div data-win-control='WinJS.UI.Pivot'></div> -->
-            <progress value="15" max="50"></progress> 
+            <progress value="15" max="50"></progress>
+            <div class="win-searchbox" data-win-control="WinJS.UI.AutoSuggestBox" data-win-options="{queryText: 'conan'}"></div>
+            <div data-win-control="WinJS.UI.ViewBox" class="win-viewbox">
+                <div id="containerDiv">
+                    <div id="div1">1</div>
+                    <div id="div2">2</div>
+                    <div id="div3">3</div>
+                </div>
+            </div>
         </section>
     </div>
 </body>

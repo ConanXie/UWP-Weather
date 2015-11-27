@@ -74,9 +74,12 @@
     <Content Include="pages\home\home.css" />
     <Content Include="pages\home\home.html" />
     <Content Include="pages\home\home.js" />
-    <Content Include="pages\page2\page2.css" />
-    <Content Include="pages\page2\page2.html" />
-    <Content Include="pages\page2\page2.js" />
+    <Content Include="pages\city\city.css" />
+    <Content Include="pages\city\city.html" />
+    <Content Include="pages\city\city.js" />
+    <Content Include="pages\setting\setting.css" />
+    <Content Include="pages\setting\setting.html" />
+    <Content Include="pages\setting\setting.js" />
     <Content Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />

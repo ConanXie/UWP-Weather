@@ -36,12 +36,18 @@
                         icon: 'favorite',
                         tooltip: '城市',
                         placement: 'bottom',
-                        location: '/pages/page2/page2.html',
+                        location: '/pages/city/city.html',
                         oninvoked: mySplitView.cityClicked
                     }"></div>
             </div>
             <div class="nav-commands commands-bottom">
-                <div data-win-control="WinJS.UI.SplitViewCommand" data-win-options="{ label: '设置', icon: 'settings'}"></div>
+                <div data-win-control="WinJS.UI.SplitViewCommand" data-win-options="{
+                        label: '设置',
+                        icon: 'settings',
+                        tooltip: '设置',
+                        location: '/pages/setting/setting.html',
+                        oninvoked: mySplitView.settingClicked
+                    }"></div>
             </div>
         </div>
         <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/home/home.html'}"></div>

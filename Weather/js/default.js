@@ -12,27 +12,31 @@
             if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
                 //TODO: 已经新启动此应用程序。请在此初始化你的应用程序。
                 var titleBar = Windows.UI.ViewManagement.ApplicationView.getForCurrentView().titleBar;
-                // titleBar.
+                console.log(titleBar);
                 titleBar.backgroundColor = Windows.UI.Colors.black;
                 titleBar.buttonBackgroundColor = Windows.UI.Colors.black;
-                // console.log(titleBar.buttonBackgroundColor);
+                titleBar.inactiveBackgroundColor = Windows.UI.Colors.black;
+                titleBar.buttonInactiveBackgroundColor = Windows.UI.Colors.black;
+                titleBar.buttonHoverBackgroundColor = {r: 30, g: 30, b: 30, a: 1};
+                titleBar.buttonHoverForegroundColor = Windows.UI.Colors.white;
+                // console.log(titleBar);
                 var mySplitView = window.mySplitView = {
-                    splitView: null,
-                    homeClicked: WinJS.UI.eventHandler(function (ev) {
-                        //implementation here
-                        // console.log(this.winControl.location);
-                        // console.log(nav.location);
-                        if (nav.location !== this.winControl.location) {
-                            nav.navigate(this.winControl.location);
+                    splitView: new WinJS.UI.SplitView(document.querySelector('.splitView'), {oninvoked: function (ev) {
+                        mySplitView.splitView.closePane();
+                        var location = ev.target.winControl.location;
+                        if (location && location !== nav.location) {
+                            nav.navigate(location);
                         }
+                    }}),
+                    homeClicked: WinJS.UI.eventHandler(function (ev) {
+                        // mySplitView.splitView.closePane();
+                        
                     }),
                     cityClicked: WinJS.UI.eventHandler(function (ev) {
-                        if (nav.location !== this.winControl.location) {
-                            nav.navigate(this.winControl.location);
-                        }
+                        // mySplitView.splitView.closePane();
+                        
                     })
                 };
-
                 /*var messageDialog = new Windows.UI.Popups.MessageDialog('nav.state.name1');
                 console.log(messageDialog);
                 messageDialog.showAsync().done(function () {
@@ -79,8 +83,6 @@
 
                     // Create a new DatePicker control with value of initialDate inside element "myDatePickerDiv"
                     var control = new WinJS.UI.DatePicker(divControlCreation, { current: initialDate });
-
-                    WinJS.log && WinJS.log("Imperative DatePicker with initial date: September, 1, 1990", "sample", "status");
                 }
 
                 //
@@ -97,7 +99,6 @@
                     // Activate controls inside the div and process the options records
                     WinJS.UI.processAll(divControlCreation);
 
-                    WinJS.log && WinJS.log("Declarative DatePicker with initial date: June, 21, 2011", "sample", "status");
                 }
 
                 function resetOutput() {

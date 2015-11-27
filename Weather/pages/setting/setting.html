@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="setting.css" rel="stylesheet" />
+    <script src="setting.js"></script>
+</head>
+<body>
+    <div class="setting">
+        <div class="toolbar">
+            <h6 class="win-h6">设置</h6>
+        </div>
+        <div class="setting-box">
+            <div id="wifiToggle" data-win-control="WinJS.UI.ToggleSwitch" data-win-options="{
+                    title: '预警通知',
+                    des: 'hahah',
+                    labelOn: '开',
+                    labelOff: '关',
+                    checked: true,
+                    onchange: toggleWifi
+                }"></div>
+            <h3 class="win-h3">起始位置</h3>
+            <input type="radio" class="win-radio" id="auto" name="position" value="auto">
+            <label for="auto">自动定位</label><br>
+            <input type="radio" class="win-radio" id="custom" name="position" value="custom" checked>
+            <label for="custom">自定义位置</label>
+            <div data-win-control="WinJS.UI.SearchBox"></div>
+            <div class="win-searchbox" data-win-control="WinJS.UI.AutoSuggestBox" data-win-options="{
+                    query: 'find'
+                }"></div>
+        </div>
+        <div class="about-box">
+            <h3 class="win-h3">关于</h3>
+            <h6 class="win-h6">Conan Weather</h6>
+            <p>版本 1.0.0</p>
+            <p>by: <a href="https://github.com/ConanXie">Xie Jie</a></p>
+        </div>
+    </div>
+</body>
+</html>
